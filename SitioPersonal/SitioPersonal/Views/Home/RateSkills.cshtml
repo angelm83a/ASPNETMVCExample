@@ -1,0 +1,247 @@
+﻿
+@{
+    ViewBag.Title = "Skills";
+}
+
+<link href="~/assets/css/prism.css" rel="stylesheet" />
+<script src="~/assets/js/prism.js"></script>
+<!-- Process area starts -->
+<section id="rateskills" class="service-area ">
+    <div id="_rateskills" class="process-area img-bg section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2>My Skills</h2>
+                    </div>
+                </div>
+                <p class="col-md-12">
+                    Here I rate my own skills based on my experience or interaction with a particular tool, language, or other technology. The rate is in the 100% scale.
+                    I include some code snippets to show familiarity with the language. This is not definitive and includes only some of the programming languages I use most of the time.
+                </p>
+
+            </div>
+
+            <div class="row">
+                @*<div class="col-md-3 col-sm-6 process-box">*@
+                <div class="process-box">
+                    <div class="number">65%</div>
+                    <h3>.Net/ASP.Net</h3>
+                    <div class="containerSkills">
+                        <div class="skills dotNetAsp">65%</div>
+                    </div>
+                    <pre>
+                    <code class="language-csharp">
+                            //C# code behind example
+                            [WebMethod(EnableSession = true)]
+                            public static int ResetSession()
+                            {
+                                HttpContext.Current.Session["Reset"] = true;
+                                int timeout = GetSessionTimeout();
+                                return timeout;
+                            }
+                        </code>
+                    </pre>
+                    <pre>
+                    <code class="language-aspnet">
+                    <xmp>
+                    <!--HTML and ASP codes-->
+                    <div class="footer" align="right">
+                        <asp:Button ID="btnYes" runat="server" Text="Yes" CssClass="yes3" OnClientClick="return ResetSession()" Width="40px" />
+                        <asp:Button ID="btnNo" runat="server" Text="No" CssClass="no3" Width="40px" />
+                    </div>        
+                        </xmp>
+                        </code>
+                     </pre>
+                </div>
+
+                <div class="process-box">
+                    <div class="number">65%</div>
+                    <h3>C#</h3>
+                    <div class="containerSkills">
+                        <div class="skills csharpDoNet">65%</div>
+                    </div>
+                    <pre>
+                    <code class="language-csharp">
+                            //C# code example
+                            class Program
+                            {
+                                static void Main(string[] args)
+                                {
+                                    Person Tom = new Person();
+                                    Tom.Age = 30;
+                                    Console.WriteLine(Tom.Age);
+                                    Console.ReadLine();
+                                }
+                            }
+                        </code>
+                        </pre>
+                    <pre>
+                    <code class="language-csharp">
+                    <xmp>
+                            //C# code example
+                            class Person
+                            {
+                                private int age;
+                                public int Age
+                                {
+                                    set{if (value >= 0)
+                                        {age = value;}}
+                                    get{return age;}
+                                }
+                            }
+                            </xmp>
+                        </code>
+                        </pre>
+                </div>
+
+                <div class="process-box">
+                    <div class="number ">55%</div>
+                    <h3>JavaScript</h3>
+                    <div class="containerSkills">
+                        <div class="skills jsSkill">55%</div>
+                    </div>
+                    <pre>
+                    <code class="language-html">
+                    <xmp>
+                    <p id="demo"></p>
+                    <button type="button" onclick="Greeting();">Click Me!</button>
+                            </xmp>
+                        </code>
+                    </pre>
+                    <pre>
+                    <code class="language-javascript">
+                                function Greeting() {
+                                    document.getElementById('demo').innerHTML = "Hello, I'm Angel!";
+                                }
+                        </code>
+                    </pre>
+                </div>
+                @*<div class="col-md-3 col-sm-6 process-box last">*@
+
+                <div class="process-box">
+                    <div class="number">50%</div>
+                    <h3>jQuery</h3>
+                    <div class="containerSkills">
+                        <div class="skills jQuerySkill">50%</div>
+                    </div>
+                    <pre>
+                    <code class="language-html">
+                    <xmp>
+                    <button type="button" id="btnClickMe">Click Me!</button>
+                            </xmp>
+                        </code>
+                    </pre>
+                    <pre>
+                    <code class="language-javascript">
+                            $(document).ready(function() {
+                                $("#btnClickMe").click(function() {
+                                    alert("Hello, I'm Angel!");
+                                });
+                            });
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="process-box">
+                    <div class="number">50%</div>
+                    <h3>CSS/Bootstrap</h3>
+                    <div class="containerSkills">
+                        <div class="skills cssSkill">50%</div>
+                    </div>
+                        <pre class="">
+                        <code class="language-css">
+                            <xmp>
+                                /* Modal Content */
+                                .modal-contentFile {
+                                background-color: #fefefe;
+                                margin: auto;
+                                padding: 20px;
+                                border: 1px solid #888;
+                                width: 80%;
+                                }
+                            </xmp>
+                        </code>
+                        </pre>
+                </div>
+                <div class="process-box">
+                    <div class="number">75%</div>
+                    <h3>HTML</h3>
+                    <div class="containerSkills">
+                        <div class="skills htmlSkill">75%</div>
+                    </div>
+                        <pre>
+                        <code class="language-html">
+                            <xmp>
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                    <title>Test HTML</title>
+                                </head>
+                                <body>
+                                    <div id="HTML" class="content">
+                                        <h3>HyperText Markup Language</h3>
+                                        <p>HTML determines website content and structure.</p>
+                                    </div>
+                                </body>
+                            </html>
+                            </xmp>
+                        </code>
+                        </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="process-box">
+                    <div class="number">55%</div>
+                    <h3>Git/Bitbucket</h3>
+                    <div class="containerSkills">
+                        <div class="skills gitSkills">55%</div>
+                    </div>
+                        <pre>
+                        <code class="language-git">
+                            <xmp>
+                                git add index.html css/styles.css
+                                git commit -m "Change titles and styling on homepage"
+                            </xmp>
+                        </code>
+                        </pre>
+                </div>
+                <div class="process-box">
+                    <div class="number">60%</div>
+                    <h3>
+                        SQL/MS SSMS
+                    </h3>
+                    <div class="containerSkills">
+                        <div class="skills sqlSkill">60%</div>
+                    </div>
+                        <pre>
+                        <code class="language-sql">
+                            <xmp>
+                                SELECT COUNT (ID) FROM [SampleTable].[dbo].[Requests]
+                                where RequestStatusID in (
+                                    select RequestStatusID FROM [SampleTable].[dbo].[Requests] a
+                                    left join [RequestStatus] b on a.RequestStatusID = b.ID
+                                    where b.StatusName in ('New', 'Started', 'Accepted')
+                                )
+                            </xmp>
+                        </code>
+                        </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2></h2>
+                    </div>
+                </div>
+                <p class="col-md-12">
+                    I have been exposed academically to other frameworks and programming languages such as Java and C/C++. 
+                    I am constantly sharpening my skills and learning others.
+                    There is always room for improvement, constructive criticism, and correction.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Process area ends -->

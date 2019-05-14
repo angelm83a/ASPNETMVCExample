@@ -1,0 +1,90 @@
+﻿@*@model SitioPersonal.Models.GetResume*@
+@{
+    ViewBag.Title = "AboutMe";
+    //Layout = "~/Views/AboutMe/AboutMe.cshtml";
+}
+
+
+<!-- About area starts -->
+<section id="about" class="about-area section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2>ABOUT ME</h2>
+                </div>
+            </div>
+            <p class="col-md-12">
+                "I believe software developers are an integral part in our society. Hospitals, hotels, restaurants,
+                schools, universities; micro, small, medium, large enterprises, and people depend on the work we do.
+                I believe in collaboration, sharing knowledge, shaping partners' skills,
+                and helping each other as a keys to succeed as a team. I also believe in commitment as a way to show loyalty to the organization. As last, I believe
+                this world would be boring without software developers!" ☺
+            </p>
+        </div>
+
+        <div class="row">
+
+            <!-- About Image -->
+            <div class="col-md-6">
+                <div class="me-image">
+                    <img src="~/assets/img/about/about.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- About Text -->
+            <div class="col-md-6">
+                <div class="about-text">
+                    <h4>Hi, I am A. Munoz</h4>
+                    <p>
+                        <strong>Education:</strong> BSc. in Information Systems Engineering, <a href="https://www.ulatina.edu.pa/" target="_blank">Latin University of Panama (ULATINA)</a>
+                    </p>
+                    <p>Actively pursuing a <a href="http://omscs.gatech.edu/" target="_blank">Master of Science in Computer Science (MSc.) at Georgia Institute of Technology.</a></p>
+                    <p><strong>Work experience:</strong></p>
+                        <ul style="padding-left: 30px;">
+                                <li>Programmer Assistant (Junior Programmer) at <a href="https://www.jaxenergy.com/" target="_blank">Jackson Energy Authority</a></li>
+                                <li>Sr. Technical Support Specialist at <a href="https://www.dell.com/learn/pa/es/pacorp1/about-dell" target="_blank">Dell Panama</a></li>
+                                <li>Helpdesk and Technical Support at <a href="https://www.baccredomatic.com/es-pa" target="_blank">BAC Bank Panama</a></li>
+                        </ul>
+
+                    <h4>About this website</h4>
+                    <p>
+                        ASP.Net MVC5 using C#. The template has been modified from its original HTML5 format to be broken down in views.
+                    </p>
+                    <a class="btn dark smooth_scroll" href="#contact">Contact Me Now</a>
+                    <a id="getModal1" class="btn getModal1">View my resume</a>
+
+                    <!-- The Modal -->
+                    <div id="myModalFile" class="modalFile">
+                        <!-- Modal content -->
+                        <div class="modal-contentFile">
+                            <span class="closeFile">&times;</span>
+                            <p>My Resume</p>
+                            <div id="pdfContainer" style="border:thin;">
+
+                                <object data=@Model.ResumeName type="application/pdf" width="100%" height="500">
+
+                                    <b>Error</b>: This browser does not support PDFs. Please download the PDF to view it:
+                                    <a href="@Model.ResumeName">Download PDF</a>.
+
+                                </object>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+@*<br />*@
+<!-- About area ends -->
+<!-- helps refresh the div content for the pdf file - EDGE was not showing it unless quick scroll or another button -->
+<script src="~/assets/js/jquery.min.js"></script>
+<script>
+    $("#getModal1").click(function () {
+        $("#pdfContainer").load(" #pdfContainer > *");
+    });
+</script>

@@ -1,0 +1,106 @@
+﻿@using System.Web.Optimization
+@model SitioPersonal.Models.ActivitiesModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site title -->
+    <title>@ViewBag.Title</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+    @Styles.Render("~/bundles/css")
+
+</head>
+
+<body>
+
+    <!-- Preloader starts-->
+    <div id="preloader"></div>
+    <!-- Preloader ends -->
+    <!-- Navigation area starts -->
+    <div class="menu-area navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <!-- Navigation starts -->
+                <div class="col-md-12">
+                    <div class="mainmenu">
+                        <div class="navbar navbar-nobg">
+                            <div class="navbar-header">
+                                <a class="navbar-brand LinkPointer" onclick="window.location.href='@Url.Action("Home", "Home")'">A. Munoz</a>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse">
+                                <nav>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active"><a class="smooth_scroll" onclick="window.location.href='@Url.Action("Home", "Home")'">Take me Home</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation ends -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Navigation area ends -->
+    <!-- Contact area starts -->
+    <p></p>
+    <section id="contact" class="contact-area section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2>@Model.SetMessageOnScreenHeader</h2>
+                    </div>
+                </div>
+                <p class="col-md-12">@Model.SetMessageOnScreenTextBlock</p>
+            </div>
+            
+            <div class="row contact-row">
+                <div class="col-md-6">
+                    <ul class="contact-info">
+
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <p>(901) 487-****</p>
+                        </li>
+                        <li>
+                            <i class="fa fa-send"></i>
+                            <p>yourEmail@yahoo.com</p>
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker"></i>
+                            <p>Casselberry, Orlando Florida Area</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Contact area ends -->
+
+
+    @RenderBody()
+
+    @Html.Partial("_Footer")
+    @Scripts.Render("~/bundles/js")
+</body>
+
+</html>
+
+

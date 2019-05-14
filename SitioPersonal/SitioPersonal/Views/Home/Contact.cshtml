@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+<!-- Contact area starts -->
+<section id="contact" class="contact-area section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2>GET IN TOUCH</h2>
+                </div>
+            </div>
+            <p class="col-md-12">Searching for a Jr. Net Developer in the Orlando, Florida area? You can contact me directly using the information below or filling out the message form. 
+            Please include a phone number in your message. Thanks!</p>
+        </div>
+
+
+        <div class="row contact-row">
+            <div class="col-md-6">
+
+                <!-- Contact form starts -->
+                <div class="contact-form">
+
+                    <!-- Submition status -->
+                    <div id="form-messages"></div>
+                    @using (Html.BeginForm("Contact", "Contact", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @*<form id="ajax-contact" action="Home/Home" method="post">*@
+
+                        <div class="form-group in_name">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="NAME" required="required">
+                        </div>
+
+                        <div class="form-group in_email">
+                            <input type="email" name="email" class="form-control" id="email" placeholder="EMAIL" required="required">
+                        </div>
+
+                        <div class="form-group in_message">
+                            <textarea rows="5" name="message" class="form-control" id="message" placeholder="MESSAGE" required="required"></textarea>
+                        </div>
+
+                        <div class="actions">
+                            <input type="submit" value="Send Now" name="submit" id="submitButton" class="btn dark" title="Submit Your Message!">
+                        </div>
+
+                    }
+                    @*</form>*@
+                </div>
+
+                <!-- Contact form ends-->
+            </div>
+
+            <div class="col-md-6">
+                <ul class="contact-info">
+                    <li>
+                        <i class="fa fa-send"></i>
+                        <p>yourEmail@yahoo.com</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <p>(901) 487-****</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <p>Casselberry, Orlando Florida Area</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-globe"></i>
+                        <p>www.sitedomain.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact area ends -->
+

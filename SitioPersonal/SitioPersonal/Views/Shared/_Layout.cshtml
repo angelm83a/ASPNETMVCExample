@@ -1,0 +1,42 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site title -->
+    <title>@ViewBag.Title</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+    @Styles.Render("~/bundles/css")
+
+</head>
+
+<body>
+
+    <!-- Preloader starts-->
+    <div id="preloader"></div>
+    <!-- Preloader ends -->
+
+    @Html.Partial("_Navigation")
+
+    @*@Html.Partial("Home")*@
+
+    @*@Html.Partial("AboutMe")
+    @Html.Partial("Services")
+    @Html.Partial("Portfolio")
+    @Html.Partial("Contact")*@
+    @RenderBody()
+
+    @Html.Partial("_Footer")
+    @Scripts.Render("~/bundles/js")
+</body>
+
+</html>
+
+
